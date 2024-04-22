@@ -15,4 +15,6 @@ apellido = str(input("Ingresa tu apellido: "))
 rut = str(input("Ingresa tu rut: "))
 correo = str(input("Ingresa tu correo: "))
 telefono = str(input("Ingresa tu número telefónico: "))
+telefono = telefono.replace('+56', '')
+
 print (f"\nNOMBRE:\t\t {nombre.upper() + " " + apellido.upper()}\nRUT:\t\t {rut}\nCORREO:\t\t {correo.upper()}\nTELÉFONO:\t {telefono}\n\n¡Hasta luego!")
