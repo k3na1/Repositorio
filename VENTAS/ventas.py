@@ -1,19 +1,3 @@
-"""
-La cafetería de grano ubicada en DUOC Puerto Montt necesita analizar sus ventas diarias.
-La cafetería vende pan ciabatta, pie de limón, café, té, entre otros productos, y los alumnos
-compran a diario. Se te ha proporcionado un archivo llamado "ventas.txt" que contiene las
-ventas de cada producto por día, separadas por comas. Tu tarea es leer el archivo, calcular
-el total de ventas para cada producto y el promedio de ventas diarias, y luego imprimir los
-resultados
-
-50,30,20,10
-40,25,15,8
-60,35,25,12
-45,28,18,9
-55,32,22,11
-
-"""
-
 with open("ventas.txt", 'r') as fichero:
     panCiabattaVentas = []
     pieDeLimonVentas = []
