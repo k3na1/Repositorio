@@ -8,7 +8,7 @@ def verificador (nombre, sueldo, hTrabajadas):
     elif nombre == "":
         print ("ERROR: NOMBRE DE TRABAJADOR VACÍO. INGRESE UN NOMBRE PARA CONTINUAR")
         valido = False
-    elif sueldo <= 0 and hTrabajadas <= 0:
+    elif sueldo <= 0 or hTrabajadas <= 0:
         print ("ERROR: SUELDO O HORAS TRABAJADAS EXTRAS NO VÁLIDAS. INGRESE DATOS NUEVOS")
         valido = False
     else:
