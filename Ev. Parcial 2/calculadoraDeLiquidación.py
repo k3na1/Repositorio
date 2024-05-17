@@ -58,7 +58,7 @@ while flag == True:
                 """
                 )
             
-            with open (f"liquidación_{"_".join(userName.split())}.txt","w", encoding='utf-8') as liquidación:
+            with open (f"liquidación_{'_'.join(userName.split())}.txt","w", encoding='utf-8') as liquidación:
                 liquidación.write (    
                f"""
                 LIQUIDACIÓN
