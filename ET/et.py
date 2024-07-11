@@ -79,8 +79,9 @@ trabajadores = ["Juan Pérez","María García","Carlos López","Ana Martínez","
 diccionarioSueldos = {}
 flag = True
 
-try:
-    while flag == True:
+
+while flag == True:
+    try:
         print ("    ----MENÚ----\n1) Asignar sueldos aleatorios\n2) Clasificar sueldos\n3) Ver Estadísticas\n4) Reporte de sueldos\n5) Salir")
         opcion = int(input("Opción: "))
         if opcion == 1:
@@ -103,19 +104,20 @@ try:
                 print("Primero genere los sueldos antes de continuar (OPCIÓN 1)")
             else:
                 print("Nombre empleado  Sueldo base     Descuento Salud     Descuento AFP   Sueldo liquido")
+                datos = []
                 for nombre, valor in diccionarioSueldos.items():
-                    datos = []
                     datos.append(f"{nombre},{valor},{round(valor * 0.07)},{round(valor * 0.12)},{round(valor - ((valor * 0.07) + (valor * 0.12)))}")
                     print(f"{nombre}   {valor}  {round(valor * 0.07)}  {round(valor * 0.12)}  {round(valor - ((valor * 0.07) + (valor * 0.12)))}")
-                    print(datos)
-
-                print(datos)
                 print("\nArchivo CSV generado")
                 with open("Sueldos.csv", 'w', encoding='utf-8') as archivo:
                     archivo.write(f"NombreEmpleado,SueldoBase,DescuentoSalud,DescuentoAFP,SueldoLiquido\n")
                     for i, dato in enumerate(datos):
                         archivo.write(f"{dato}\n")
-
+        elif opcion == 5:
+            print("Finalizando programa...\nDesarrollado por Francisco Aránguiz\nRUT 21.321.123-4")
+            time.sleep(2)
+        else:
+            print("Seleccione una opción válida")
                 
-except:
-    print("ERROR. VERIFIQUE LOS DATOS Y SI EL PROBLEMA PERSISTE CONTACTAR CON UN SUPERVISOR")
+    except:
+        print("ERROR. VERIFIQUE LOS DATOS Y SI EL PROBLEMA PERSISTE CONTACTAR CON UN SUPERVISOR")
